@@ -102,13 +102,52 @@
         font-weight: 100;
 
         &:nth-of-type(1) {
-          transform: translateX(-80px);
+          transform: translate(-80px, 50px);
+          opacity: 0;
+          animation: fadeUpTextOne 400ms ease-out 3s forwards;
+
+          @keyframes fadeUpTextOne {
+            0% {
+              transform: translate(-80px, 50px);
+              opacity: 0;
+            }
+            100% {
+              transform: translate(-80px, 0px);
+              opacity: 1;
+            }
+          }
         }
         &:nth-of-type(2) {
-          transform: translateX(250px);
+          transform: translate(250px, 50px);
+          opacity: 0;
+          animation: fadeUpTextTwo 400ms ease-out 3.2s forwards;
+
+          @keyframes fadeUpTextTwo {
+            0% {
+              transform: translate(250px, 50px);
+              opacity: 0;
+            }
+            100% {
+              transform: translate(250px, 0px);
+              opacity: 1;
+            }
+          }
         }
         &:nth-of-type(3) {
-          transform: translateX(-40px);
+          transform: translateX(-20px);
+          opacity: 0;
+          animation: fadeUpTextThree 400ms ease-out 3.4s forwards;
+
+          @keyframes fadeUpTextThree {
+            0% {
+              transform: translate(-20px, 50px);
+              opacity: 0;
+            }
+            100% {
+              transform: translate(-20px, 0px);
+              opacity: 1;
+            }
+          }
         }
       }
     }
