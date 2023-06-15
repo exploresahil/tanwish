@@ -22,17 +22,20 @@
       fill: $light;
       max-width: 100px;
       max-height: 100px;
-      transform: scale(0) rotate(-90deg);
+      transform: perspective(1px) translateZ(-10px) rotate(-180deg);
+      opacity: 0;
 
       animation: rotateScale 1000ms ease-out forwards;
 
       @keyframes rotateScale {
         0% {
-          transform: scale(0) rotate(-90deg);
+          transform: perspective(1px) translateZ(-10px) rotate(-180deg);
+          opacity: 0;
         }
 
         100% {
-          transform: scale(1) rotate(0deg);
+          transform: perspective(1px) translateZ(0px) rotate(0deg);
+          opacity: 1;
         }
       }
     }
@@ -44,7 +47,7 @@
       transform: translateY(20px);
       opacity: 0;
 
-      animation: fadeUp 500ms ease-out forwards 500ms;
+      animation: fadeUp 500ms ease-out 1000ms forwards;
 
       @keyframes fadeUp {
         0% {
@@ -67,7 +70,7 @@
     font-size: 0.6rem;
   }
 
-  animation: goUp 800ms ease-in forwards 2.2s;
+  animation: goUp 800ms ease-in 2.2s forwards;
 
   @keyframes goUp {
     0% {

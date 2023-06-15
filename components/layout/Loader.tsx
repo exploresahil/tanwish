@@ -25,7 +25,7 @@ const Loader = () => {
     <div className="loader-main">
       <div className="logo-container">
         <TanwishLogo className="logo" />
-        <h1>TANWISH</h1>
+        <h1 className="heading">TANWISH</h1>
       </div>
       <p>~ {count}% ~</p>
     </div>
