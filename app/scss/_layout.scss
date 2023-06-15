@@ -1,0 +1,181 @@
+@use "./index/variables" as *;
+
+.loader-main {
+  width: 100vw;
+  height: 100vh;
+  background-color: $brandColor;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+
+    .logo {
+      fill: $light;
+      max-width: 100px;
+      max-height: 100px;
+      transform: scale(0) rotate(-90deg);
+
+      animation: rotateScale 1000ms ease-out forwards;
+
+      @keyframes rotateScale {
+        0% {
+          transform: scale(0) rotate(-90deg);
+        }
+
+        100% {
+          transform: scale(1) rotate(0deg);
+        }
+      }
+    }
+
+    h1 {
+      color: $light;
+      font-size: 2rem;
+      font-weight: 100;
+      transform: translateY(20px);
+      opacity: 0;
+
+      animation: fadeUp 500ms ease-out forwards 500ms;
+
+      @keyframes fadeUp {
+        0% {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+
+        100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  p {
+    color: $light;
+    position: absolute;
+    bottom: 10vh;
+    font-size: 0.6rem;
+  }
+
+  animation: goUp 800ms ease-in forwards 2.2s;
+
+  @keyframes goUp {
+    0% {
+      transform: translateY(0vh);
+    }
+    100% {
+      transform: translateY(-100vh);
+    }
+  }
+}
+
+.splash-main {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+  .splash-container {
+    display: flex;
+    flex-direction: column;
+
+    .text-container {
+      text-transform: uppercase;
+      font-size: 4rem;
+      line-height: 1;
+
+      h2 {
+        font-weight: 100;
+
+        &:nth-of-type(1) {
+          transform: translateX(-80px);
+        }
+        &:nth-of-type(2) {
+          transform: translateX(250px);
+        }
+        &:nth-of-type(3) {
+          transform: translateX(-40px);
+        }
+      }
+    }
+  }
+}
+
+header {
+  width: 100vw;
+  height: 100px;
+  padding: 0 10vw;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    .logo {
+      fill: $brandColor;
+      width: 80px;
+      height: 80px;
+
+      transition: transform 300ms ease-out;
+    }
+
+    h2 {
+      color: $brandColor;
+      font-size: 2rem;
+      font-weight: 100;
+      font-family: $brandFont;
+    }
+
+    &:hover {
+      .logo {
+        transform: rotate(45deg);
+        transition: transform 500ms ease-out;
+      }
+    }
+  }
+
+  .header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    ul {
+      display: flex;
+      gap: 1em;
+      font-size: 1.2rem;
+
+      li a {
+        color: $brandColor;
+
+        &:hover {
+          transition: all 200ms ease-out;
+          color: $dark;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+
+    .account-button {
+      display: flex;
+      gap: 0.5em;
+    }
+  }
+}

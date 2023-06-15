@@ -1,0 +1,82 @@
+@use "./variables" as *;
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: $brandFont;
+  font-weight: 100;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h3,
+h4,
+h5,
+p,
+a,
+button {
+  font-family: $font;
+}
+
+a {
+  text-decoration: none;
+  color: $dark;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: 1px solid $brandColor;
+  padding: 0.2em 1em;
+  border-radius: 9999px;
+  color: $brandColor;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $brandColor;
+    border: none;
+    color: $light;
+    transition: all 200ms ease-out;
+  }
+}

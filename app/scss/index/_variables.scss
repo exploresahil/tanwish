@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "milonerregular";
+  src: url("./fonts/milonerregular-l3ygd-webfont.woff2") format("woff2"),
+    url("./fonts/milonerregular-l3ygd-webfont.woff") format("woff"),
+    url("./fonts/MilonerRegular-L3YgD.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$brandFont: "milonerregular", serif;
+$font: "Open Sans", sans-serif;
+
+$dark: #000000;
+$light: #ffffff;
+$brandColor: #706633;
