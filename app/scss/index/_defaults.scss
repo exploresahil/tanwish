@@ -66,17 +66,18 @@ ol {
 }
 
 button {
+  width: fit-content;
   background: none;
   border: 1px solid $brandColor;
   padding: 0.2em 1em;
   border-radius: 9999px;
   color: $brandColor;
   cursor: pointer;
+  transition: all 400ms ease-out;
 
   &:hover {
     background-color: $brandColor;
-    border: none;
     color: $light;
-    transition: all 200ms ease-out;
+    transition: all 500ms ease-out;
   }
 }
